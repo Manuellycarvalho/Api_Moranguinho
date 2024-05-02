@@ -7,10 +7,10 @@ class MoranguinhoModel(Base):
     __tablename__ = 'moranguinho'
     
     id: int = Column(Integer, primary_key=True, autoincrement=True, index=True)
-    nome: str = Column(String(100))
-    residencia: str = Column(String(100))
-    genero: str = Column(String(100))
-    ocupacao: str  = Column(String(100))
-    aparencia: str = Column(String(100))
-    personalidade: str = Column(String(100))
-    animais_de_estimacao: str = Column(String(100))
+    nome: str = Column(String(100),nullable=False)
+    residencia: str = Column(String(100),nullable=False)
+    genero: str = Column(String(100),nullable=False)
+    ocupacao: str  = Column(String(100),nullable=False)
+    aparencia: str = Column(String(100),nullable=False)
+    personalidade: str = Column(String(100),nullable=False)
+    animais_de_estimacao: str = Column(String(100),nullable=False)

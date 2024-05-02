@@ -1,8 +1,6 @@
-from typing import Optional
-from pydantic import BaseModel as SCBaseModel
+from pydantic import BaseModel
 
-class MoranguinhoSchema(SCBaseModel):
-    id: Optional[int] = None
+class MoranguinhoSchema(BaseModel):
     nome: str
     residencia: str
     genero: str
@@ -11,5 +9,12 @@ class MoranguinhoSchema(SCBaseModel):
     personalidade: str
     animais_de_estimacao: str
     
+class MoranguinhoRequest(MoranguinhoSchema):    
+    ...
+
+class MoranguinhoResponse(MoranguinhoSchema):
+    id: int
+
+
     class Config:
-        orm_mode = True 
+        orm_mode = True
